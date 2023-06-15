@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="ona.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ona</title>
+	<script type="text/javascript">
+        function odliczanie()
+        {
+            var dzisiaj = new Date();
+    
+            var dzien = dzisiaj.getDate();
+            var miesiac = dzisiaj.getMonth()+1;
+            var rok = dzisiaj.getFullYear();
+    
+            var godzina = dzisiaj.getHours();
+            if (godzina<10) godzina = "0"+godzina;
+    
+            var minuta = dzisiaj.getMinutes();
+            if (minuta<10) minuta = "0"+minuta;
+    
+            var sekunda = dzisiaj.getSeconds();
+            if (sekunda<10) sekunda = "0"+sekunda;
+            document.getElementById("zegar").innerHTML =
+            dzien+"/"+miesiac+"/"+rok+"|"+godzina+":"+minuta+":"+sekunda;
+            setTimeout("odliczanie()", 1000);
+        }	
+            
+        </script>
+    </head>
+    <body onload="odliczanie();">
+        <div id="zegar"></div>
+        <script type="text/javascript">
+            document.getElementById("zegar").innerHTML =
+            dzien+"/"+miesiac+"/"+rok+"|"+godzina+":"+minuta+":"+sekunda;
+        </script>
+    <div>
+		<a href="http://localhost/indeks.html"><img class="logo" src="logo.jpg" width="4%"></a>
+	</div>
+    <div class="button-bar">
+        <a href="http://127.0.0.1:5500/On/on.html"><button>On</button></a>
+        <a href="http://127.0.0.1:5500/Ona/ona.html"><button>Ona</button></a>
+        <a href="http://127.0.0.1:5500/Stroje%20kąpielowe/stroje.html"><button>Stroje kąpielowe</button></a>
+        <a href="http://127.0.0.1:5500/Pianki%20Damskie/PiankiD.html"><button>Pianki Damskie</button></a>
+        <a href="http://127.0.0.1:5500/Pianki%20męskie/PiankiM.html"><button>Pianki Męskie</button></a>
+        <a href="http://127.0.0.1:5500/Surfboard/Surfboard.html"><button>Surfboards</button></a>
+      </div>
+
+    <div class="row">
+        <div class="column">
+            <a href=""><img  src="Tshirt1.jpg" width="100%"></a>
+            <a href=""><img class="hover_img" src="Tshirt1 tyl.jpg" width="100%"></a>
+        </div>
+
+        <div class="column">
+            <a href=""><img  src="tshirt2.jpg" width="100%"></a>
+            <a href=""><img class="hover_img" src="tshirt2 tyl.jpg" width="100%"></a>
+        </div>
+
+        <div class="column">
+            <a href=""><img  src="tshirt3.jpg" width="100%"></a>
+            <a href=""><img class="hover_img" src="tshirt3 tyl.jpg" width="100%"></a>
+        </div>
+        <div class="dreamland"><img src="dreamland.png" alt=""></div>
+        <div class="bday"><img src="bday.png" alt=""></div>
+        <div class="pipe"><img src="pipe.png" alt=""></div>
+    </div>
+</body>
+</html>         

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Surfshop</title>
+	<style>
+	</style>
+    <link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+	function odliczanie()
+	{
+		var dzisiaj = new Date();
+
+		var dzien = dzisiaj.getDate();
+		var miesiac = dzisiaj.getMonth()+1;
+		var rok = dzisiaj.getFullYear();
+
+		var godzina = dzisiaj.getHours();
+		if (godzina<10) godzina = "0"+godzina;
+
+		var minuta = dzisiaj.getMinutes();
+		if (minuta<10) minuta = "0"+minuta;
+
+		var sekunda = dzisiaj.getSeconds();
+		if (sekunda<10) sekunda = "0"+sekunda;
+		document.getElementById("zegar").innerHTML =
+		dzien+"/"+miesiac+"/"+rok+"|"+godzina+":"+minuta+":"+sekunda;
+		setTimeout("odliczanie()", 1000);
+	}	
+		
+	</script>
+</head>
+<body onload="odliczanie();">
+	<div id="zegar"></div>
+	<script type="text/javascript">
+		document.getElementById("zegar").innerHTML =
+		dzien+"/"+miesiac+"/"+rok+"|"+godzina+":"+minuta+":"+sekunda;
+	</script>
+	<div>
+		<img class='logo' src="logo.jpg" width="4%">
+	</div>
+
+	<div class="button-bar">
+        <a href="http://127.0.0.1:5500/On/on.html"><button>On</button></a>
+        <a href="http://127.0.0.1:5500/Ona/ona.html"><button>Ona</button></a>
+        <a href="http://127.0.0.1:5500/Stroje%20kąpielowe/stroje.html"><button>Stroje kąpielowe</button></a>
+        <a href="http://127.0.0.1:5500/Pianki%20Damskie/PiankiD.html"><button>Pianki Damskie</button></a>
+        <a href="http://127.0.0.1:5500/Pianki%20męskie/PiankiM.html"><button>Pianki Męskie</button></a>
+        <a href="http://127.0.0.1:5500/Surfboard/Surfboard.html"><button>Surfboards</button></a>
+      </div>
+
+	<div>
+		<a href="http://127.0.0.1:5500/On/on.html"><img class='photos' src="fotka1.png" width="49.9%"></a>
+	</div>
+
+	<div>
+		<a href="http://127.0.0.1:5500/Ona/ona.html"><img class='photos' src="fota2.png" width="50%"></a>
+	</div> <br>
+
+	<div class="row">
+        <div class="column">
+            <a href="http://127.0.0.1:5500/Surfboard/Surfboard.html"><img class="products" src="surfboards.jpg" width="100%"></a>
+        </div>
+
+        <div class="column">
+            <a href="http://127.0.0.1:5500/Pianki%20męskie/PiankiM.html"><img class="products" src="swimsuits for mem.jpg" width="100%"></a>
+        </div>
+
+        <div class="column">
+            <a href="http://127.0.0.1:5500/Pianki%20Damskie/PiankiD.html"><img class="products" src="swimsuits for women.jpg" width="100%"></a>
+        </div>
+
+		<div class="column">
+            <a href="http://127.0.0.1:5500/Stroje%20kąpielowe/stroje.html"><img class="products" src="bikini.jpg" width="100%"></a>
+        </div>
+    </div>
+	<div class="surfboards"><img src="surfboards.png" alt=""></div>
+	<div class="stroje"><img src="stroje.png" alt=""></div>
+	<div class="piankiD"><img src="piankiD.png" alt=""></div>
+	<div class="piankiM"><img src="piankiM.png" alt=""></div>
+	<br> <br> <br> <br> <br> <br> <br> <br>
+	<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/xtHZKToMvus" title="YouTube video player" 
+	frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+	allowfullscreen></iframe>
+
+	<img class='newsletter' src="NEWSLETTER.png" >
+	
+	<form action="connect.php" method="POST">
+		<label for="email">Email Address:</label>
+		<input type="email" id="email" name="email" required>
+		<button type="submit">Sign Up</button>
+	</form>
+
+</body>
+</html>
